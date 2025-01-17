@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    font-family:sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar form {
+    display: flex;
+    align-items: center;
+}
+
+.navbar input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    min-height: 100vh; /* Make container as tall as viewport */
+}
+
+/* Left Menu */
+.left-menu {
+    background-color: #f0f0f0;
+    width: 250px;
+    padding: 20px;
+    overflow-y: auto; /* Add scrollbar for long menus */
+}
+
+.left-menu h2 {
+    margin-bottom: 15px;
+}
+
+.left-menu ul {
+    list-style: none;
+    padding: 20;
+}
+
+.left-menu li {
+    margin-bottom: 10px;
+}
+
+.left-menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1; /* Make it take up most of the space */
+    padding: 50px;
+}
+
+/* Right Panel */
+.right-panel {
+    background-color: #f0f0f0;
+    width: 300px;
+    padding: 50px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Collapsible Menu */
+.toggle-button {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.collapsed {
+    height: 0;
+    overflow: hidden;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1600px) and (min-width: 992px) {
+    .container {
+        transform: scale(0.9); /* Shrink by 90% */
+        transform-origin: left top; 
+    }
+}
+
+@media (max-width: 767px) and (min-width: 700px) {
+    .container {
+        transform: scale(0.8); /* Shrink by 80% */
+        transform-origin: left top; 
+    }
+}
+
+@media (max-width: 700px) and (min-width: 600px) {
+    .container {
+        width: 75%; 
+        margin: 0 auto; 
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 50%;
+        margin: 0 auto; 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-menu {
+        width: 100%;
+    }
+}
